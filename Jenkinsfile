@@ -12,7 +12,10 @@ pipeline {
         
         stage('terraform Init') {
             steps{
+                dir('cloudfront-build') 
+                {
                 sh 'terraform init'
+                }
             }
         }
 
