@@ -21,13 +21,19 @@ pipeline {
 
         stage('terraform Plan') {
             steps{
+                dir('cloudfront-build') 
+                {
                 sh 'terraform plan'
+                }
             }
         }
 
         stage('terraform apply') {
             steps{
+                dir('cloudfront-build') 
+                {
                 sh 'terraform apply --auto-approve'
+                }
             }
         }
     }
