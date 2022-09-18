@@ -1,18 +1,3 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 4.16"
-    }
-  }
-
-  required_version = ">= 1.2.0"
-}
-
-provider "aws" {
-  region = "us-east-1"
-}
-
 resource "aws_cloudfront_distribution" "alb_beanstalk" {
   origin {
     domain_name = "awseb-AWSEB-1RTU7A6N7Q7YH-127164989.us-east-1.elb.amazonaws.com"
