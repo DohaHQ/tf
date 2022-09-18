@@ -11,6 +11,7 @@ terraform {
   
   provider "aws" {
     region = "us-east-1"
+    profile = "duihua"
   }
 
 resource "aws_cloudfront_distribution" "alb_beanstalk" {
