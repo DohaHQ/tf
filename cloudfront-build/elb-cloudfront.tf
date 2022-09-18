@@ -11,9 +11,6 @@ terraform {
 
 provider "aws" {
   region = "us-east-1"
-  assume_role {
-  role_arn = "XXX"
-  }
 }
 
 resource "aws_cloudfront_distribution" "alb_beanstalk" {
