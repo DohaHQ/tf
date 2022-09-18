@@ -18,6 +18,20 @@ pipeline {
                 }
             }
         }
+        stage ("terraform fmt") {
+            steps {
+                dir('cloudfront-build') {
+                sh 'terraform fmt'
+                }
+            }
+        }
+        stage ("terraform validate") {
+            steps {
+                dir('cloudfront-build') {
+                sh 'terraform validate'
+                }
+            }
+        }
 
         stage('terraform Plan') {
             steps{
