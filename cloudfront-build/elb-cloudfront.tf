@@ -10,7 +10,10 @@ terraform {
   }
   
   provider "aws" {
-    region = "us-east-1"
+    provider "aws" {
+  shared_config_files      = ["/Users/tf_user/.aws/conf"]
+  shared_credentials_files = ["/Users/tf_user/.aws/creds"]
+  profile                  = "customprofile"
   }
 
 resource "aws_cloudfront_distribution" "alb_beanstalk" {
