@@ -10,9 +10,8 @@ terraform {
   }
   
   provider "aws" {
-  shared_config_files      = ["~/home/ubuntu/.aws/config"]
-  shared_credentials_files = ["~/home/ubuntu/.aws/credentials"]
-  profile                  = "test"
+ 
+      region = us-east-1
   }
 
 resource "aws_cloudfront_distribution" "alb_beanstalk" {
