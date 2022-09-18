@@ -11,9 +11,9 @@ terraform {
   
   provider "aws" {
     provider "aws" {
-  shared_config_files      = ["/Users/tf_user/.aws/conf"]
-  shared_credentials_files = ["/Users/tf_user/.aws/creds"]
-  profile                  = "customprofile"
+  shared_config_files      = ["~/home/ubuntu/.aws/config"]
+  shared_credentials_files = ["~/home/ubuntu/.aws/credentials"]
+  profile                  = "test"
   }
 
 resource "aws_cloudfront_distribution" "alb_beanstalk" {
